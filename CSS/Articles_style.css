@@ -1,0 +1,122 @@
+body
+{
+  height: 100vh;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+html
+{
+  padding-bottom: 0;
+}
+main.Articles-container
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2;
+ 
+}
+main.Articles-container p
+{
+  grid-column: 1/-1;
+}
+main.Articles-container p.page-indicator
+{
+  font-size: 2rem;
+  color: blue;
+  margin: 30px 15px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 9px;
+}
+main.Articles-container a
+{
+  text-decoration: none;
+  color: blue;
+}
+
+div.scrollable-Articles-container
+{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  justify-content: space-between;
+  height: 1500px;
+  overflow-y: scroll;
+  position: relative;
+  box-shadow: 0 3px 6px grey;
+}
+div.scrollable-Articles-container h1
+{
+  border-bottom: 3px solid grey;
+  color: white;
+  margin: 0 0 0 19px;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  z-index: 1;
+}
+.elevator
+{
+  height: 1500px;
+}
+div.scrollable-Articles-container hr
+{
+  width: 90%;
+  display: block;
+}
+div.scrollable-Articles-container img
+{
+  margin: 35px;
+  border-radius: 9px;
+  animation: img-slider 50s linear 3s infinite;
+  z-index: -0;
+}
+@keyframes img-slider
+{
+  100%{
+    transform: translateY(-1000px);
+  }
+}
+div.scrollable-Articles-container:hover img
+{
+  animation: removed;
+}
+.handbag-wrapper
+{
+  margin-top: 100px;
+}
+.handbag-wrapper a
+{
+  text-decoration: none;
+}
+.handbag-wrapper a h1
+{
+  border-bottom: 2px solid grey;
+  font-size: 3rem;
+  margin-bottom: -15px;
+  margin-left: 20px;
+}
+.handbag-container
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90vw;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  margin: auto;
+  padding-left: 20px;
+}
+.handbag-container a img
+{
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  width: 85vw;
+  height: 700px;
+  margin: 100px 40px;
+  border-radius: 9px;
+}
+
+footer
+{
+  margin-top:50px;
+}

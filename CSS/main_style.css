@@ -1,0 +1,371 @@
+body
+{
+  margin:0;
+  padding:0;
+  height: 200vh;
+  
+}
+header
+{
+ display: flex;
+ justify-content: space-around;
+ height: 170px;
+ align-items: flex-start;
+ background-color: #dd6b9ae4;
+ position: sticky;
+ opacity: 1;
+ top: 0;
+ z-index: 2;
+ animation: header-down 2s ease-in-out ;
+}
+@keyframes header-down
+{
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+header div.menu-tab p
+{
+  font-size: 2rem;
+}
+
+
+.menu-tab
+{
+ margin:6px;
+ color:#f3e7ece4;
+}
+[data-article-container],[data-command-container]
+{
+  position: relative;
+}
+[data-articles] + div
+{
+  visibility: hidden;
+  position: absolute;
+  left: -25px;
+  width: 300px;
+  
+}
+[data-articles] + div a
+{
+  text-decoration: none;
+  color: white;
+}
+[data-articles] + div p
+{
+  text-align: left;
+  margin-left: 20px;
+}
+[data-articles] + div a.handbag
+{
+  
+  display: inline-block;
+  width: 233px;
+  padding-left: 0;
+  text-align: left;
+}
+[data-article-container]:hover > div
+{
+  visibility: visible;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 2;
+  
+}
+[data-article-container]:hover > [data-articles]
+{
+  background-color: black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+[data-command] + div
+{
+  visibility: hidden;
+  position: absolute;
+  left: -90px;
+  width: 300px;
+}
+
+[data-command-container]:hover > div
+{
+  visibility: visible;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 2;
+  
+}
+[data-command-container]:hover [data-command]
+{
+  background-color: black;
+  border-radius: 10px;
+  padding: 5px;
+}
+div[data-contact-container] > p.contact a
+{
+  text-decoration: none;
+  color: #f3e7ece4;
+}
+div#logo
+{
+ border-radius: 6px;
+ text-align: center;
+ text-shadow: -2px 4px 5px #8e62bae4;
+ align-self: flex-start;
+ padding: 0;
+ height: fit-content;
+}
+div#logo p
+{
+  color: white;
+  font-size: 3.7rem;
+  font-weight: 900;
+  font-family: monospace;
+  padding: 0;
+  width:180px;
+  word-wrap: break-word;
+  margin: 0;
+  box-shadow: 3px 2px 5px #47b8da14;
+  border-radius: 10px;
+  text-shadow: 3px 2px 4px purple;
+  animation: logo-animation 7s linear 2s infinite;
+}
+@keyframes logo-animation
+{
+  20%{
+    color: purple;
+    text-shadow: 0 2px 2px #e7d1d1;
+  }
+  40%{
+    color: pink;
+    text-shadow: 0 3px 2px #000;
+  }
+  60%{
+    color: #c8386ce4;
+  }
+  70%{
+    color: #7fcd90;
+  }
+  80%{
+    color: #4478c7;
+  }
+}
+header hr
+{
+  align-self: baseline;
+  display: inline;
+  position: absolute;
+  right:0;
+  z-index:1;
+  top: 95px;
+  padding: 0 0;
+  width: 650px;
+}
+.form-search
+{
+  align-self: flex-end;
+  position: absolute;
+  right:28vw;
+  color: white;
+  z-index: 1;
+  opacity: 0;
+  animation: form-animation 3s ease-in-out 1s forwards;
+}
+@keyframes form-animation
+{
+  0%{
+    
+    opacity: 0;
+  }
+  25%{
+    opacity: 0.3;
+  }
+  50%{
+    opacity: 0.6;
+  }
+  70%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+form
+{
+  /*background-color: black;*/
+  padding-bottom: 10px;
+}
+.form-search-field
+{
+  width: 300px;
+  color: black;
+  border-radius: 9px;
+  height: 30px;
+  font-size: 19px;
+}
+.submit-button
+{
+  margin: 10px auto;
+  color: white;
+  background-color: black;
+  border-radius: 9px;
+  font-size: 19px;
+  
+}
+main div.photo1
+{
+  background-image: url('Images/IMG-20230405-WA0004.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-color: #b871b4e4;
+  height: 1200px;
+  margin: 20px;
+  border-bottom: 2px solid #573535;
+}
+main div.photo1 p.pickup-line-text
+{
+  font-size: 2rem;
+  color : #ffffffe4;
+  font-weight: 100;
+  line-height: 50px;
+  text-shadow: 2px 1px 2px black;
+  
+}
+main div.photo1 div.pickup-line
+{
+  position: relative;
+  top: 500px;
+  width: fit-content;
+  z-index: 1;
+}
+button.take_action,main div.photo1 div.pickup-line,main div.photo1 p.pickup-line-text
+{
+  margin: auto;
+  text-align: center;
+}
+button.take_action
+{
+  margin-top: 30px;
+  font-size: 3rem;
+  padding: 15px 9px;
+  border-radius: 9px;
+  background-color: #8865c8e4;
+  border: 2px inset white;
+  font-weight: bold;
+}
+button.take_action a
+{
+  text-decoration: none;
+  color: white;
+}
+button.take_action a:hover
+{
+  background-color: #8865c8e4;
+}
+
+
+div.help-command
+{
+  margin: 100px 30px;
+}
+div.help-command > h1.help-command-title
+{
+  font-style: italic;
+  margin-bottom: 30px;
+  border-bottom: 3px solid gray;
+  padding: 9px 0;
+}
+div.help-command > h1.help-command-title span
+{
+  background-color:  #dd6b9ae4;
+  border-radius: 9px;
+  font-size: 1rem;
+  padding: 3px;
+  color: white;
+  font-weight: lighter;
+  font-style: normal;
+  box-shadow: 2px 2px 3px #61a4c2e4;
+}
+div.help-command p.help-command-text
+{
+  text-align: justify;
+}
+div.help-command img
+{
+  display: block;
+  margin: 30px auto;
+  height: 900px;
+}
+div.help-command p:not(.help-command-text) a
+{
+  text-decoration: none;
+  color: #a255c8e4;
+}
+div.parent-suggestions-container
+{
+  background-color: black;
+  margin-top: 30px;
+}
+div.parent-suggestions-container h2
+{
+  text-align: center;
+}
+div.parent-suggestions-container hr
+{
+  margin: 0 30px;
+}
+div.child-suggestions-container
+{
+  display: flex;
+  justify-content: space-around;
+  height: 450px;
+  width: 100%;
+  margin:20px auto;
+}
+div.child-suggestions-container img
+{
+  height:auto;
+  width:420px;
+  max-width: 500px;
+  border-radius: 9px;
+}
+div.child-suggestions-container div
+{
+  height: fit-content;
+  width: fit-content;
+  margin: 20px;
+}
+
+footer.footer-main-container
+{
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+}
+
+footer.footer-main-container div.footer-items
+{
+  
+  /*no property*/
+}
+footer.footer-main-container div.footer-items li
+{
+  color: white;
+  list-style-type: none;
+  margin: 20px;
+  font-size: 2rem;
+}
+footer.footer-main-container a
+{
+  text-decoration: none;
+  color: white;
+}

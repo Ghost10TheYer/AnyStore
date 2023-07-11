@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <h2>click</h2>
+        <div class="subnav">
+          <p>Link</p>
+           <p>Link</p>
+            <p>Link</p>
+             <p>Link</p>
+        </div>
+      </div>
+    </div>
+  <a href="#text">#text</a>
+    <style type="text/css" media="all">
+      .container
+{
+position: fixed;
+top: 0;
+left: 0;
+}
+ .subnav
+{
+position: absolute;
+top: 40px;
+left: -80px;
+z-index: -1;
+
+}
+.nav{
+  background-color: ;
+  z-index: 1;
+  height: 100vh;
+  width: 80px;
+}
+.nav h2
+{
+  text-align: center;
+  color: black;
+}
+.nav h2:hover
+{
+  background-color: black;
+  color: white;
+}
+.nav h2:hover ~ div.subnav
+{
+  
+  animation: menu 0.5s linear forwards;
+}
+@keyframes menu
+{
+  0%{
+    
+  }
+  100%{
+    position: absolute;
+  left: 0;
+  z-index: 1;
+  background-color: grey;
+  height: 100vh;
+  padding-top: 0;
+  top: 48px;
+  width: 80px;
+  color: #fff;
+  text-align: center;
+  }
+}
+    </style>
+  </body>
+</html>
